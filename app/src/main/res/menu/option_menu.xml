@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:menuCategory="container">
+        <item
+            android:id="@+id/menu1"
+            android:icon="@drawable/ic_announcement_black_24dp"
+            android:title="@string/menu_1"
+            app:showAsAction="always" />
+        <!--        terdapat 5 kondisi untuk tag app:showAsAction-->
+        <!--        ifRoom, akan menampilkan action ketika ada ruangan pada action bar-->
+        <!--        withText akan menampilkan action item beserta judulnya-->
+        <!--        never, tidak akan pernah ditampilkan pada action bar dan hanya akan ditampikan pada overflow menu-->
+        <!--        always, akan selalu tampil pada action bar-->
+        <!--        collapseActionView, berhubungan dengan komponen collapsible-->
+
+        <item
+            android:id="@+id/menu2"
+            android:title="@string/menu_2" />
+    </group>
+
+    <!--    Tag <group> dapat digunkan untuk mengelompokan item yg akan ditampilkan pada action bar-->
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="collapseActionView|ifRoom" />
+<!--    collapseActionView akan menunjukan bahwa item bersifat collapsible, sehingga dapat
+            disembunyikan. Sementara itu, ifRoom akan menampilkan item ketika ada ruang-->
+<!--    Elemen actionViewClass menggunakan "...SearchView" yg merupakan widget SearchView bawaan
+            Android Support Library yg mudah digunakan-->
+
+</menu>
